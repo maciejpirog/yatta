@@ -12,7 +12,7 @@ YATTA is a **parser generator**, which means that it is a program that reads a d
 
 ## Example input
 
-The description of a grammar of simple arithmetic expresisons is as follows. I think it is sufficiently self-explanatory. The file extension is `.yg` for "yatta grammar".
+The definition of simple arithmetic expressions is as follows. I think it is sufficiently self-explanatory. The file extension is `.yg` for "yatta grammar".
 
 ```
 LEXER:
