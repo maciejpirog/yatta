@@ -1,0 +1,14 @@
+LEXER:
+priv digit ('0'..'9');
+skip whitespace ('q' | '\t');
+token number (digit)(digit)*;
+token add ('+' | '-');
+token mult ('*' | '/');
+token lp ('(');
+token rp (')');
+
+PARSER:
+rule main (add_expr ENDOFFILE);
+rule add_expr (mult_expr)(add mult_expr)*;
+rule mult_expr (base_expr)(mult base_expr)*;
+rule base_expr (!lp add_expr !rp) | (^number);
